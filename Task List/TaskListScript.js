@@ -79,10 +79,22 @@ function filtrer() {
     // Loop through all list items, and hide those who don't match the search query
     for (i = 0; i < li.length; i++) {
         p = li[i];
-        if (p.innerText.toUpperCase().indexOf(filter) > -1) {
+        if (p.innerHTML.toUpperCase().indexOf(filter) > -1) {
             li[i].style.display = "";
         } else {
             li[i].style.display = "none";
         }
     }
 }
+
+//valider input avec touche entrer https://www.w3schools.com/howto/tryit.asp?filename=tryhow_js_trigger_button_enter
+
+var input = document.getElementById("myInput");
+input.addEventListener("keyup", function(event) {
+    event.preventDefault();
+    if (event.keyCode === 13) {
+        document.getElementById("addBt").click();
+    }
+});
+
+
