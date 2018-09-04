@@ -79,3 +79,9 @@ function filtrer() {
       }
     }
   }
+
+  function runScript(e) {
+    if(e.keyCode == 13){
+   newElement();
+   }
+}
