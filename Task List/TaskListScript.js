@@ -53,3 +53,8 @@ function newElement() {
     }
   }
 } 
+
+function erase() {
+    var x = document.getElementById("myUL");
+    x.parentNode.removeChild(x);
+}
