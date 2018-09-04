@@ -48,8 +48,34 @@ function newElement() {
 
 //Delete all tasks
 function erase() {
-    var x = document.getElementsByTagName("li");
-    for(var i = x.length - 1; 0 <= i; i--){
-      x[i].parentElement.removeChild(x[i]);
-    } 
+  var x = document.getElementsByTagName("li");
+  for(var i = x.length - 1; 0 <= i; i--){
+    x[i].parentElement.removeChild(x[i]);
+  } 
 }
+
+//filtre
+function filtrer() {
+    // Declare variables
+    var input
+    var filter
+    var ul
+    var li
+    var p
+    
+    var i
+    input = document.getElementById('myFilter');
+    filter = input.value.toUpperCase();
+    ul = document.getElementById("myUL");
+    li = ul.getElementsByTagName('li');
+
+    // Loop through all list items, and hide those who don't match the search query
+    for (i = 0; i < li.length; i++) {
+      p = li[i];
+      if (p.innerHTML.toUpperCase().indexOf(filter) > -1) {
+        li[i].style.display = "";
+      } else {
+        li[i].style.display = "none";
+      }
+    }
+  }
