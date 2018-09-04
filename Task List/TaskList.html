@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+		
+	<title></title>
+</head>
+<body>
+	<div id="addTask" class="header">
+		<h2>Task List</h2>
+		<input type="text" id="myInput" placeholder="New Task">
+		<br>
+		<button onclick="newElement()" class="addBtn">Add Task</button>
+	</div>
+
+	<div id="filterTasks" class="header">
+		<h2>Tasks</h2>
+		<input type="text" id="myFilter" onkeyup="filtrer()" placeholder="Filter Tasks">
+	</div>
+
+	<ul id="myUL">
+		<li>Test</li>
+	</ul> 
+
+<button onclick="erase()" class="addBtn">Clear Tasks</button>
+
+	<script src="TaskListScript.js"></script>
+
+</body>
+</html>
