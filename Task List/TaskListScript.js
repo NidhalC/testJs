@@ -55,6 +55,8 @@ function newElement() {
 } 
 
 function erase() {
-    var x = document.getElementById("myUL");
-    x.parentNode.removeChild(x);
+    var x = document.getElementsByTagName("li");
+    for(var i = x.length - 1; 0 <= i; i--){
+      x[i].parentElement.removeChild(x[i]);
+    } 
 }
